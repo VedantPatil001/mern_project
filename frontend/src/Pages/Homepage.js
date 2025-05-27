@@ -54,6 +54,7 @@ function Homepage() {
           </TabPanels>
         </Tabs>
       </Box>
+          <h2>Message to delete account</h2>
     </Container>
   );
 }
