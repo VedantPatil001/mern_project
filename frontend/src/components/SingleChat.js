@@ -18,6 +18,12 @@ import { ChatState } from "../Context/ChatProvider";
 const ENDPOINT = "http://localhost:5000"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
 var socket, selectedChatCompare;
 
+const socket = io("http://localhost:5000", {
+  withCredentials: true,
+  transports: ["websocket"], // optionally force websocket instead of polling
+});
+
+
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
