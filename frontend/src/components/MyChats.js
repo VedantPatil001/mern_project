@@ -9,7 +9,6 @@ import GroupChatModal from "./miscellaneous/GroupChatModal";
 import { Button } from "@chakra-ui/react";
 import { ChatState } from "../Context/ChatProvider";
 
-
 const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
 
@@ -43,7 +42,7 @@ const MyChats = ({ fetchAgain }) => {
   useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     fetchChats();
-   
+    // eslint-disable-next-line
   }, [fetchAgain]);
 
   return (
@@ -113,7 +112,6 @@ const MyChats = ({ fetchAgain }) => {
                       ? chat.latestMessage.content.substring(0, 51) + "..."
                       : chat.latestMessage.content}
                   </Text>
-                  
                 )}
               </Box>
             ))}
