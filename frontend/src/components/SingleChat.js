@@ -15,13 +15,9 @@ import animationData from "../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../Context/ChatProvider";
-const ENDPOINT = "http://localhost:5000"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
-var selectedChatCompare;
+const ENDPOINT = "https://chat-app-y397.onrender.com"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
+var socket, selectedChatCompare;
 
-const socket = io("http://localhost:5000", {
-  withCredentials: true,
-  transports: ["websocket"], // optionally force websocket instead of polling
-});
 
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
