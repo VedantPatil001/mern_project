@@ -55,6 +55,7 @@ const ProfileModal = ({ user, children }) => {
               Name: {user.name}<br/>
               Email: {user.email}
             </Text>
+<Text><b>If you want to delete account contact this number (8459057255) </b></Text>
           </ModalBody>
           <ModalFooter>
             <Button onClick={onClose}>Close</Button>
